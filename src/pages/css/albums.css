@@ -1,0 +1,365 @@
+.my-albums-container {
+  min-height: 100vh;
+  background-color: #2a2a2a;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.my-albums-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #7c4dff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.my-albums-main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title-section {
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #D6F379;
+}
+
+.page-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.albums-by-artist-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.artist-albums-group {
+  width: 100%;
+}
+
+.artist-section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.artist-albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.saved-album-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.saved-album-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(244, 67, 54, 0.3);
+}
+
+.album-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.album-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.saved-album-card:hover .album-image img {
+  transform: scale(1.05);
+}
+
+.album-info {
+  text-align: left;
+}
+
+.album-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.album-date {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.remove-album-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-album-btn:hover {
+  background-color: #d32f2f;
+  transform: translateY(-1px);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.empty-state p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 1400px) {
+  .my-albums-main {
+    max-width: 1400px;
+  }
+  
+  .artist-albums-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .my-albums-main {
+    padding: 1.5rem;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .artist-section-title {
+    font-size: 1.6rem;
+  }
+  
+  .artist-albums-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  .albums-by-artist-section {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-albums-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .nav-menu {
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .my-albums-main {
+    padding: 1rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .page-description {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .artist-section-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .artist-albums-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .albums-by-artist-section {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-albums-header {
+    padding: 0.8rem;
+  }
+  
+  .my-albums-main {
+    padding: 0.8rem;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+  }
+  
+  .page-description {
+    font-size: 0.8rem;
+  }
+  
+  .artist-section-title {
+    font-size: 1.2rem;
+  }
+  
+  .saved-album-card {
+    padding: 1rem;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .album-image {
+    height: 180px;
+  }
+}
+
+.saved-album-card {
+  position: relative;
+}
+
+.saved-album-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  background: linear-gradient(45deg, transparent 30%, rgba(244, 67, 54, 0.1) 50%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.saved-album-card:hover::before {
+  opacity: 1;
+}
+
+.saved-album-card:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.saved-album-card:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.saved-album-card:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.saved-album-card:nth-child(4) {
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.saved-album-card.removing {
+  animation: fadeOutDown 0.4s ease-in forwards;
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+}

@@ -1,0 +1,52 @@
+export const mockArtist = {
+  id: 1,
+  name: "{artistName}",
+  verified: true,
+  followers: "9K",
+  monthlyListeners: "5K",
+  image: "https://picsum.photos/200/200?random=artist1",
+  albums: [
+    {
+      id: 1,
+      name: "{albumName}",
+      date: "PublishedDate",
+      image: "https://picsum.photos/300/300?random=album1",
+      isFavorite: false,
+    },
+    {
+      id: 2,
+      name: "{albumName}",
+      date: "PublishedDate",
+      image: "https://picsum.photos/300/300?random=album2",
+      isFavorite: true,
+    },
+    {
+      id: 3,
+      name: "{albumName}",
+      date: "PublishedDate",
+      image: "https://picsum.photos/300/300?random=album3",
+      isFavorite: false,
+    },
+    {
+      id: 4,
+      name: "{albumName}",
+      date: "PublishedDate",
+      image: "https://picsum.photos/300/300?random=album4",
+      isFavorite: false,
+    },
+    {
+      id: 5,
+      name: "{albumName}",
+      date: "PublishedDate",
+      image: "https://picsum.photos/300/300?random=album5",
+      isFavorite: true,
+    },
+    {
+      id: 6,
+      name: "{albumName}",
+      date: "PublishedDate",
+      image: "https://picsum.photos/300/300?random=album6",
+      isFavorite: false,
+    },
+  ],
+};

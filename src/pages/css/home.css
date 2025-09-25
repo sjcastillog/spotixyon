@@ -1,0 +1,242 @@
+
+.home-container {
+  min-height: 100vh;
+  background-color: #2a2a2a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.login-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.home-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-logo {
+  flex-shrink: 0;
+}
+
+.arrow-symbol {
+  width: 600px;
+  height: 600px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.arrow-symbol:hover {
+  transform: scale(1.05);
+}
+
+.arrow-symbol svg {
+  transition: transform 0.3s ease;
+}
+
+.arrow-symbol:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #d6f379;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+
+.spotify-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  width: 170px;
+}
+
+.spotify-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(5px);
+}
+
+.spotify-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #7c4dff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.spotify-btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+
+@media (max-width: 1024px) {
+  .home-main {
+    gap: 3rem;
+  }
+
+  .arrow-symbol {
+    width: 400px;
+    height: 400px;
+    font-size: 64px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .home-main {
+    flex-direction: column;
+    gap: 0rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .arrow-symbol {
+    width: 400px;
+    height: 400px;
+    font-size: 48px;
+  }
+
+  .hero-logo {
+    padding: 0px;
+  }
+
+  .hero-content {
+    position: relative;
+    top:-80px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .spotify-btn {
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .login-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .spotify-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .spotify-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+}
